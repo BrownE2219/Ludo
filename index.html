@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link href ="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+    <link href ="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+    <link href ="style.css" rel="stylesheet" type="text/css">
+    <title>!!Ludo Game!!</title>
+  </head>
+  <body>
+    <div class = "board">
+      <div class= "house gr" style= "top:0; left:0">
+        <div class="room">
+          <div class="gr"></div>
+          <div class="bed gr" style= "top:20%; left:20%;">
+          </div>
+          <div class="bed gr" style= "top:20%; right:20%;">
+          </div>
+          <div class="bed gr" style= "bottom:20%; left:20%;">
+          </div>
+          <div class="bed gr" style= "bottom:20%; right:20%;">
+          </div>
+        </div>
+      </div>
+      <div class= "house rd" style="bottom:0; left:0;">
+        <div class="room">
+          <div class="rd"></div>
+          <div class="bed rd" style= "top:20%; left:20%;">
+          </div>
+          <div class="bed rd" style= "top:20%; right:20%;">
+          </div>
+          <div class="bed rd" style= "bottom:20%; left:20%;">
+          </div>
+          <div class="bed rd" style= "bottom:20%; right:20%;">
+          </div>
+        </div>
+      </div>
+      <div class= "house bl" style="bottom:0; right:0;">
+        <div class="room">
+          <div class ="player-bl"></div>
+          <div class="bed bl" style= "top:20%; left:20%;">
+          </div>
+          <div class="bed bl" style= "top:20%; right:20%;">
+          </div>
+          <div class="bed bl" style= "bottom:20%; left:20%;">
+          </div>
+          <div class="bed bl" style= "bottom:20%; right:20%;">
+          </div>
+        </div>
+      </div>
+      <div class= "house yl" style="right:0;">
+        <div class="room">
+          <div class="player-yl"></div>
+          <div class="bed yl" style= "top:20%; left:20%;">
+          </div>
+          <div class="bed yl" style= "top:20%; right:20%;">
+          </div>
+          <div class="bed yl" style= "bottom:20%; left:20%;">
+          </div>
+          <div class="bed yl" style= "bottom:20%; right:20%;">
+          </div>
+        </div>
+      </div>
+      <div class="home"></div>
+      <button class="playerBg0" style="left:11%; top:11.5%;">
+        <i class="fas fa-car gr"></i>
+      </button>
+      <button class= "PlayerBg1" style="left:22%; top:11.5">
+        <i class="fas fa-car gr"></i>
+      </button>
+      <button class= "PlayerBg2" style="left:11%; top:22.5%">
+        <i class="fas fa-car gr"></i>
+      </button>
+      <button class= "PlayerBg3" style="left:22%; top:22.5%">
+        <i class="fas fa-car gr"></i>
+      </button>
+      <button class= "PlayerBb0" style="left:83%; top:83.5%;">
+        <i class="fas fa-bus bl"></i>
+      </button>
+      <button class= "PlayerBb1" style="left:72%; top:83.5%;">
+        <i class="fas fa-bus bl"></i>
+      </button>
+      <button class= "PlayerBb2" style="left:83%; top:72.5%;">
+        <i class="fas fa-bus bl"></i>
+      </button>
+      <button class= "PlayerBb3" style="left:72%; top:72.5%;">
+        <i class="fas fa-bus bl"></i>
+      </button>
+      <button class= "PlayerBr0" style="left:11%; top:83.5%;">
+        <i class="fas fa-truck-monster rd"></i>
+      </button>
+      <button class= "PlayerBr1" style="left:22%; top:83.5%;">
+        <i class="fas fa-truck-monster rd"></i>
+      </button>
+      <button class= "PlayerBr2" style="left:11%; top:72.5%;">
+        <i class="fas fa-truck-monster rd"></i>
+      </button>
+      <button class= "PlayerBr3" style="left:22%; top:72.5%;">
+        <i class="fas fa-truck-monster rd"></i>
+      </button>
+      <button class= "PlayerBy0" style="left:83%; top:11.5%;">
+        <i class="fas fa-motorcycle yl"></i>
+      </button>
+      <button class= "PlayerBy1" style="left:72%; top:11.5%;">
+        <i class="fas fa-motorcycle yl"></i>
+      </button>
+      <button class= "PlayerBy2" style="left:83%; top:22.5%;">
+        <i class="fas fa-motorcycle yl"></i>
+      </button>
+      <button class= "PlayerBy3" style="left:72%; top:22.5%;">
+        <i class="fas fa-motorcycle yl"></i>
+      </button>
+
+      <div class="blocks V r13 b26 y39" style = "left:0%; top:39%;"></div>
+      <div class="blocks V g1 r14 b27 gr" style = "left:6.5%; top:39%;"></div>
+      <div class="blocks V g2 r15 b28 y41" style = "left:13%; top:39%;"></div>
+      <div class="blocks V g3 r16 b29 y42" style = "left:19.5%; top:39%;"></div>
+      <div class="blocks V g4 r17 b30 y43" style = "left:26%; top:39%;"></div>
+      <div class="blocks V g5 r18 b31 y44" style = "left:32.5%; top:39%;"></div>
+      <div class="blocks H g6 r19 b32 y45" style = "top:32.5%; left:39%;"></div>
+      <div class="blocks H g7 r20 b33 y46" style = "top:26%; left:39%;"></div>
+      <div class="blocks H g8 r21 b34 y47" style = "top:19.5%; left:39%;"></div>
+      <div class="blocks H g9 r22 b35 y48" style = "top:13%; left:39%;"></div>
+      <div class="blocks H g10 r23 b36 y49" style = "top:6.5%; left:39%;"></div>
+      <div class="blocks H g11 r24 b37 y50" style = "top:0%; left:39%;"></div>
+      <div class="blocks H g12 r25 b38 y51" style = "top:0%; left:46.33%;"></div>
+      <!-- top most yellow colored -->
+      <div class="blocks H y52 yl" style = "top:6.5%; left:46.33%;"></div>
+      <div class="blocks H y53 yl" style = "top:13%; left:46.33%;"></div>
+      <div class="blocks H y54 yl" style = "top:19.5%; left:46.33%;"></div>
+      <div class="blocks H y55 yl" style = "top:26%; left:46.33%;"></div>
+      <div class="blocks H y56 yl" style = "top:32.5%; left:46.33%;"></div>
+      <!-- top most yellow colored -->
+      <div class="blocks H g13 r26 b39" style = "top:0%; left:53.66%;"></div>
+      <div class="blocks H g14 r27 b40 y1 yl" style = "top:6.5%; left:53.66%;"></div>
+      <div class="blocks H g15 r28 b41 y2" style = "top:13%; left:53.66%;"></div>
+      <div class="blocks H g16 r29 b42 y3" style = "top:19.5%; left:53.66%;"></div>
+      <div class="blocks H g17 r30 b43 y4" style = "top:26%; left:53.66%;"></div>
+      <div class="blocks H g18 r31 b44 y5" style = "top:32.5%; left:53.66%;"></div>
+      <div class="blocks V g20 r33 b46 y7" style = "right:26%; top:39%;"></div>
+      <div class="blocks V g19 r32 b45 y6" style = "right:32.5%; top:39%;"></div>
+      <div class="blocks V g21 r34 b47 y8" style = "right:19.5%; top:39%;"></div>
+      <div class="blocks V g22 r35 b48 y9" style = "right:13%; top:39%;"></div>
+      <div class="blocks V g23 r36 b49 y10" style = "right:6.5%; top:39%;"></div>
+      <div class="blocks V g24 r37 b50 y11" style = "right:0%; top:39%;"></div>
+      <div class="blocks V g25 r38 b51 y12" style = "right:0%; top:46.33%;"></div>
+      <!-- right most blue colored -->
+      <div class="blocks V b52 bl" style = "right:6.5%; top:46.33%;"></div>
+      <div class="blocks V b53 bl" style = "right:13%; top:46.33%;"></div>
+      <div class="blocks V b54 bl" style = "right:19.5%; top:46.33%;"></div>
+      <div class="blocks V b55 bl" style = "right:26%; top:46.33%;"></div>
+      <div class="blocks V b56 bl " style = "right:32.5%; top:46.33%;"></div>
+      <!-- right most blue colored -->
+      <div class="blocks V g26 r39 y13" style = "right:0%; top:53.66%;"></div>
+      <div class="blocks V g27 r40 b1 y14 bl" style = "right:6.5%; top:53.66%;"></div>
+      <div class="blocks V g28 r41 b2 y15 " style = "right:13%; top:53.66%;"></div>
+      <div class="blocks V g29 r42 b3 y16" style = "right:19.5%; top:53.66%;"></div>
+      <div class="blocks V g30 r43 b4 y17" style = "right:26%; top:53.66%;"></div>
+      <div class="blocks V g31 r44 b5 y18" style = "right:32.5%; top:53.66%;"></div>
+      <div class="blocks H g32 r45 b6 y19" style = "bottom:32.5%; left:53.66%;"></div>
+      <div class="blocks H g33 r44 b7 y20" style = "bottom:26%; left:53.66%;"></div>
+      <div class="blocks H g34 r45 b8 y21" style = "bottom:19.5%; left:53.66%;"></div>
+      <div class="blocks H g35 r46 b9 y22" style = "bottom:13%; left:53.66%;"></div>
+      <div class="blocks H g36 r47 b10 y23" style = "bottom:6.5%; left:53.66%;"></div>
+      <div class="blocks H g37 r48 b11 y24" style = "bottom:0%; left:53.66%;"></div>
+      <div class="blocks H g38 r51 b12 y25" style = "bottom:0%; left:46.33%;"></div>
+      <!-- bottom most red colored -->
+      <div class="blocks H r52 rd" style = "bottom:6.5%; left:46.33%;"></div>
+      <div class="blocks H r53 rd" style = "bottom:13%; left:46.33%;"></div>
+      <div class="blocks H r54 rd" style = "bottom:19.5%; left:46.33%;"></div>
+      <div class="blocks H r55 rd" style = "bottom:26%; left:46.33%;"></div>
+      <div class="blocks H r56 rd" style = "bottom:32.5%; left:46.33%;"></div>
+      <!-- bottom most red colored -->
+      <div class="blocks H g39 b13 y26" style = "bottom:0%; left:39%;"></div>
+      <div class="blocks H g40 r1 b14 y27 rd" style = "bottom:6.5%; left:39%;"></div>
+      <div class="blocks H g41 r2 b15 y28" style = "bottom:13%; left:39%;"></div>
+      <div class="blocks H g42 r3 b16 y29" style = "bottom:19.5%; left:39%;"></div>
+      <div class="blocks H g43 r4 b17 y30 " style = "bottom:26%; left:39%;"></div>
+      <div class="blocks H g44 r5 b18 y31" style = "bottom:32.5%; left:39%;"></div>
+      <div class="blocks V g45 r6 b19 y32" style = "left:32.5%; top:53.66%;"></div>
+      <div class="blocks V g46 r7 b20 y33" style = "left:26%; top:53.66%;"></div>
+      <div class="blocks V g47 r8 b21 y34" style = "left:19.5%; top:53.66%;"></div>
+      <div class="blocks V g48 r9 b22 y35" style = "left:13%; top:53.66%;"></div>
+      <div class="blocks V g49 r10 b23 y36" style = "left:6.5%; top:53.66%;"></div>
+      <div class="blocks V g50 r11 b24 y37" style = "left:0%; top:53.66%;"></div>
+      <div class="blocks V g51 r12 b25 y38" style = "left:0%; top:46.33%;"></div>
+      <!-- left most green colored -->
+      <div class="blocks V g52 gr" style = "left:6.5%; top:46.33%;"></div>
+      <div class="blocks V g53 gr" style = "left:13%; top:46.33%;"></div>
+      <div class="blocks V g54 gr" style = "left:19.5%; top:46.33%;"></div>
+      <div class="blocks V g55 gr" style = "left:26%; top:46.33%;"></div>
+      <div class="blocks V g56 gr" style = "left:32.5%; top:46.33%;"></div>
+      <!-- left most green colored -->
+    </div>
+    <div class = "diceouter player0dice">
+      <div class="playroll0 dice">
+        <div class="diceinner 0">
+          <div class="p01 dot cntr"></div>
+          <div class="p02 dot topleft"></div>
+          <div class="p03 dot topright"></div>
+          <div class="p04 dot topcenter"></div>
+          <div class="p05 dot bottomleft"></div>
+          <div class="p06 dot bottomright"></div>
+          <div class="p07 dot bottomcenter"></div>
+        </div>
+      </div>
+    </div>
+    <div class = "diceouter player1dice">
+      <div class="playroll1 dice">
+        <div class="diceinner">
+          <div class="p11 dot cntr"></div>
+          <div class="p12 dot topleft"></div>
+          <div class="p13 dot topright"></div>
+          <div class="p14 dot topcenter"></div>
+          <div class="p15 dot bottomleft"></div>
+          <div class="p16 dot bottomright"></div>
+          <div class="p17 dot bottomcenter"></div>
+        </div>
+      </div>
+    </div>
+    <div class = "diceouter player2dice">
+      <div class="playroll2 dice">
+        <div class="diceinner">
+          <div class="p21 dot cntr"></div>
+          <div class="p22 dot topleft"></div>
+          <div class="p23 dot topright"></div>
+          <div class="p24 dot topcenter"></div>
+          <div class="p25 dot bottomleft"></div>
+          <div class="p26 dot bottomright"></div>
+          <div class="p27 dot bottomcenter"></div>
+        </div>
+      </div>
+    </div>
+    <div class = "diceouter player3dice">
+      <div class="playroll3 dice">
+        <div class="diceinner">
+          <div class="p31 dot cntr"></div>
+          <div class="p32 dot topleft"></div>
+          <div class="p33 dot topright"></div>
+          <div class="p34 dot topcenter"></div>
+          <div class="p35 dot bottomleft"></div>
+          <div class="p36 dot bottomright"></div>
+          <div class="p37 dot bottomcenter"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src = "ludo.js">
+  </script>
+</html>
