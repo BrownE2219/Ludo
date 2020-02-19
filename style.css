@@ -1,0 +1,240 @@
+.H{
+  width: 7.33%;
+  height: 6.5%;
+}
+.V{
+  width: 6.5%;
+  height: 7.33%;
+}
+
+.blocks {
+    position: absolute;
+    border-collapse: collapse;
+    border: 2px solid rgba(230,230,230,105);
+}
+
+
+.room{
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  top:10%;
+  left:10%;
+  background-color: white;
+  border-radius: 10%;
+}
+.bed{
+  position:absolute;
+  height: 25%;
+  width: 25%;
+  border-radius: 5%;
+}
+
+.house{
+  width:39%;
+  height:39%;
+  position:absolute;
+}
+
+.home{
+  width:22%;
+  height:22%;
+  position:absolute;
+  left:39%;
+  top:39%;
+  bottom:39%;
+  right:39%;
+  background-color: black;
+  border: 5px solid;
+  border-top-color: rgb(255,240,110);
+  border-left-color: rgb(100,200,100);
+  border-right-color: rgb(50,50,100);
+  border-bottom-color: rgb(240,60,55);
+  background-size:contain;
+}
+
+.gr{
+    background-color:rgb(100,200,100);
+    color:rgb(50,150,50);
+}
+.bl{
+    background-color:rgb(50,50,100);
+    color:rgb(0,0,50);
+}
+
+.rd{
+    background-color:rgb(240,60,55);
+    color:(255,0,0);
+}
+.yl{
+    background-color:rgb(255,240,110);
+    color:rgb(205,190,60);
+}
+  .board{
+    width:44%;
+    height:95%;
+    background-color:rgb(255,255,255);
+    position:fixed;
+    top:2.5%;
+    left:28%;
+    box-shadow: 0 5px 20px 0 rgba(10, 10, 10, 1), 0 2px 20px 0 rgba(10, 10, 10, 1);
+  }
+
+    .diceouter{
+      width:8%;
+      height:16%;
+      border-radius: 10%;
+      background-image: linear-gradient(to left, rgba(0,0,200,1), rgba(200,0,200,1));
+      position:fixed;
+      }
+      .player0dice{
+        top:3%;
+        left:18%;
+      }
+      .player1dice{
+        bottom:3%;
+        left:18%;
+      }
+      .player2dice{
+        bottom:3%;
+        right:18%;
+      }
+      .player3dice{
+        top:3%;
+        right:18%;
+      }
+
+@media screen and (max-width: 600px) {
+.board{
+width:100%;
+height:60%;
+background-color:rgb(255,255,255);
+position:fixed;
+top:20%;
+left:0;
+box-shadow: 0 5px 20px 0 rgba(10, 10, 10, 1), 0 2px 20px 0 rgba(10, 10, 10, 1);
+}
+.diceouter{
+  width:15%;
+  height:10%;
+  border-radius: 10%;
+  background-image: linear-gradient(to left, rgba(0,0,200,1), rgba(200,0,200,1));
+  position:fixed;
+}
+  .player0dice{
+    top:9%;
+    left:3%;
+  }
+  .player1dice{
+    bottom:9%;
+    left:3%;
+  }
+  .player2dice{
+    bottom:9%;
+    right:3%;
+  }
+  .player3dice{
+    top:9%;
+    right:3%;
+  }
+}
+.dice{
+  width:90%;
+  height:90%;
+  border-radius:9%;
+  background-color: rgb(92,138,138);
+  border: 3px solid;
+  position:absolute;
+  top: 5%;
+  left: 5%;
+}
+.diceinner{
+  width:85%;
+  height:85%;
+  border-radius:9%;
+  background-image: linear-gradient(to left, rgba(75,75,200,10), rgba(0,0,100,1));
+  border:3px solid;
+  border-color: rgb(255,255,200);
+  position:absolute;
+  top: 7.5%;
+  left: 7.5%;
+}
+
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    box-sizing:border-box;
+}
+
+.dot {
+  height: 28%;
+  width: 28%;
+  background-color: #ffffff;
+  border-radius: 80%;
+  position:absolute;
+  display: none;
+}
+
+.cntr{
+  top: 35%;
+  left: 37%;
+}
+
+.topleft{
+  top:2%;
+  left:2%;
+}
+
+.topright{
+  top:2%;
+  right:2%
+}
+
+.topcenter{
+  top:2%;
+  left:37%;
+}
+
+.bottomleft{
+  bottom:2%;
+  left:2%;
+}
+
+.bottomright{
+  bottom:2%;
+  right:2%;
+}
+
+.bottomcenter{
+  bottom:2%;
+  left:37%;
+}
+
+body{
+  background-image: url("back.png");
+  height:40%;
+}
+i{
+  position:absolute;
+  top:20%;
+  left:20%;
+  font-size: 4vh;
+}
+@media screen and (max-width:600px){
+  i{
+    position:absolute;
+    top:20%;
+    left:20%;
+    font-size: 2vh;
+  }
+}
+button
+{
+ width: 6%;
+ height: 5%;
+ position:absolute;
+ top:11.5%;
+ left:11%;
+}
