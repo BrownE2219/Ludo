@@ -1,5 +1,4 @@
 var activePlayer, dice, pos, but;
-var players;
 var dicerolled;
 var i = 1;
 init();
@@ -8,7 +7,7 @@ document.querySelector('.playroll'+activePlayer).addEventListener('click',rolled
 function rolled(){
   roll();
   dicerolled = true;
-/*  document.querySelector('.playroll'+activePlayer).removeEventListener('click',rolled); */
+  document.querySelector('.playroll'+activePlayer).removeEventListener('click',rolled);
   document.querySelector('.PlayerB'+activePlayer+'0').addEventListener('click',function(){pawn('0');});
   document.querySelector('.PlayerB'+activePlayer+'1').addEventListener('click',function(){pawn('1');});
   document.querySelector('.PlayerB'+activePlayer+'2').addEventListener('click',function(){pawn('2');});
@@ -74,19 +73,14 @@ function roll(){
   }
 }
 function init(){
-  activePlayer = 2;
+  activePlayer = 0
   dicerolled = false;
   players = [0,1,2,3,0];
-  pos = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]]
-document.querySelector('.p'+activePlayer+'1').style.display = "none";
-document.querySelector('.p'+activePlayer+'2').style.display = "block";
-document.querySelector('.p'+activePlayer+'3').style.display = "block";
-document.querySelector('.p'+activePlayer+'4').style.display = "block";
-document.querySelector('.p'+activePlayer+'5').style.display = "block";
-document.querySelector('.p'+activePlayer+'6').style.display = "block";
-document.querySelector('.p'+activePlayer+'7').style.display = "block";
+  pos = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]];
+  defaultDice();
 }
 function pawn(k){
+
   var b = document.querySelector('.PlayerB'+activePlayer+k).style;
   if(dicerolled)
   {
@@ -110,11 +104,38 @@ function pawn(k){
       b.left = document.querySelector('.y'+(1+dice)).style.left;
       b.top = document.querySelector('.y'+(1+dice)).style.top;
     }
-
     dicerolled = false;
+    waitingDice();
+    nextplayer();
+    defaultDice();
   }
+  document.querySelector('.playroll'+activePlayer).addEventListener('click',rolled);
+
 }
 function nextplayer(){
-  activePlayer = players[players.findIndex(activePlayer)+1];
-  return activePlayer;
+  if(activePlayer === 3)
+  {
+    activePlayer = 0;
+  }
+  else {
+    activePlayer += 1;
+  }
+}
+function defaultDice(){
+  document.querySelector('.p'+activePlayer+'1').style.display = "none";
+  document.querySelector('.p'+activePlayer+'2').style.display = "block";
+  document.querySelector('.p'+activePlayer+'3').style.display = "block";
+  document.querySelector('.p'+activePlayer+'4').style.display = "block";
+  document.querySelector('.p'+activePlayer+'5').style.display = "block";
+  document.querySelector('.p'+activePlayer+'6').style.display = "block";
+  document.querySelector('.p'+activePlayer+'7').style.display = "block";
+}
+function waitingDice(){
+  document.querySelector('.p'+activePlayer+'1').style.display = "none";
+  document.querySelector('.p'+activePlayer+'2').style.display = "none";
+  document.querySelector('.p'+activePlayer+'3').style.display = "none";
+  document.querySelector('.p'+activePlayer+'4').style.display = "none";
+  document.querySelector('.p'+activePlayer+'5').style.display = "none";
+  document.querySelector('.p'+activePlayer+'6').style.display = "none";
+  document.querySelector('.p'+activePlayer+'7').style.display = "none";
 }
