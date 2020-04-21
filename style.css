@@ -235,6 +235,7 @@ i{
 
 button
 {
+ z-index: 1;
  width: 6%;
  height: 5%;
  position:absolute;
